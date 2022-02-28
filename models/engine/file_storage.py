@@ -14,15 +14,22 @@ class FileStorage():
         return self.__objects
 
     def new(self, obj):
-        self.__objects[f'{obj.__class__.__name__}.{obj.id}'] = obj.to_dict()
+        self.__objects[f'{obj.__class__.__name__}.{obj.id}'] = obj
 
     def save(self):
+        aux_dic = {}
         with open(self.__file_path, 'w+', encoding='utf8') as my_j_file:
-            json.dump(self.__objects, my_j_file)
+            for key, value in self.__objects.items():
+                aux_dic[key] = value.to_dict()
+            json.dump(aux_dic, my_j_file)
+
 
     def reload(self):
+        from models.base_model import BaseModel
         try:
             with open(self.__file_path, 'r', encoding='utf8') as my_j_file:
-                self.__objects = json.load(my_j_file)
+                new_dic = json.load(my_j_file)
+                for key, value in new_dic.items():
+                    self.__objects[key] = BaseModel(**value)
         except Exception:
             return
