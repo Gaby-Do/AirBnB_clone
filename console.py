@@ -5,10 +5,12 @@ entry point of the command interpreter
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
+
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb)'
-    
+
     def check_args(self, line):
         args = line.split()
         class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity', 'Place', 'Review']
@@ -56,7 +58,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print('** no instance found **')
                     return
-           
+
     def do_destroy(self, line):
         """
         Deletes an instance based on the class name and id (save change into JSON file)
@@ -90,8 +92,8 @@ class HBNBCommand(cmd.Cmd):
                 print(print_list)
             else:
                 print("** class doesn't exist **")
-            
-        else:    
+
+        else:
             all_obj = storage.all()
             for key, obj in all_obj.items():
                 print_list.append(obj.__str__())
@@ -122,17 +124,6 @@ class HBNBCommand(cmd.Cmd):
 
                 else:
                     print('** no instance found **')
-
-        #check_att_name(args[2])
-        #check_att_value(args[3])
-
-
-
-   
-
-
-
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

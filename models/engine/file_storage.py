@@ -26,10 +26,12 @@ class FileStorage():
 
     def reload(self):
         from models.base_model import BaseModel
+        from models.user import User
         try:
             with open(self.__file_path, 'r', encoding='utf8') as my_j_file:
                 new_dic = json.load(my_j_file)
                 for key, value in new_dic.items():
-                    self.__objects[key] = BaseModel(**value)
+                    key_args = str(key).split('.')
+                    self.__objects[key] = eval(key_args[0])(**value)
         except Exception:
             return
