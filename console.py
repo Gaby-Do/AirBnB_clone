@@ -45,7 +45,7 @@ class HBNBCommand(cmd.Cmd):
         """
         args = self.check_args(line)
         if args:
-            if not args[1]:
+            if len(args) < 2:
                 print('** instance id missing **')
             else:
                 obj_id = args[0]+'.'+args[1]
@@ -117,7 +117,7 @@ class HBNBCommand(cmd.Cmd):
                 all_obj = storage.all()
                 if obj_id in all_obj.keys():
                     obj = all_obj[obj_id]
-                    setattr(obj, args[2], args[3])
+                    setattr(obj, args[2], args[3].strip('"'))
                     obj.save()
 
                 else:
