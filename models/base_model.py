@@ -16,6 +16,7 @@ class BaseModel():
     def __init__(self, *args, **kwargs):
         """
         Initializes class BaseModel
+        
         Public attributes:
             id: string, asigned with uuid when an instance is created
             created_at: datetime - assigned with the current datetime\n
@@ -23,6 +24,10 @@ class BaseModel():
             updated_at: datetime - assigned with the current datetime\n
             when an instance is created and it will be updated\n
             every time the object is changed
+        
+        Arguments:
+            *args: isnt't used
+            **kwargs: dictionary that contains all arguments by key/value
         """
         if len(kwargs) != 0:
             for key, value in kwargs.items():
@@ -53,6 +58,9 @@ class BaseModel():
         storage.save()
 
     def to_dict(self):
+        """
+        returns a dictionary containing all keys/values of __dict__ of the instance
+        """
         dictio = self.__dict__.copy()
         dictio["__class__"] = self.__class__.__name__
         dictio["created_at"] = self.created_at.isoformat()

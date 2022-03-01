@@ -19,6 +19,7 @@ from models.base_model import BaseModel
 
 
 class Place(BaseModel):
+    """class Place, inherits from BaseModel"""
     city_id = ""
     user_id = ""
     name = ""
@@ -32,4 +33,5 @@ class Place(BaseModel):
     amenity_ids = []
 
     def __str__(self):
+        """formats how __str__ will be printed"""
         return f'[{__class__.__name__}] ({self.id}) {self.__dict__}'
