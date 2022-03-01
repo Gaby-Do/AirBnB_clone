@@ -5,6 +5,11 @@ entry point of the command interpreter
 import cmd
 from models.base_model import BaseModel
 from models import storage
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
 from models.user import User
 
 
@@ -13,7 +18,8 @@ class HBNBCommand(cmd.Cmd):
 
     def check_args(self, line):
         args = line.split()
-        class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity', 'Place', 'Review']
+        class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity',
+                      'Place', 'Review']
         if len(args) == 0:
             print('** class name missing **')
             return
@@ -33,7 +39,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, line):
         """
-        Creates new instance of BaseModel, saves it (to the JSON file) and prints the id
+        Creates new instance of BaseModel,\
+        saves it (to the JSON file) and prints the id
         """
         args = self.check_args(line)
         if args:
@@ -43,7 +50,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """
-        Prints the string representation of an instance based on the class name and id
+        Prints the string representation of an instance\
+        based on the class name and id
         """
         args = self.check_args(line)
         if args:
@@ -61,7 +69,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """
-        Deletes an instance based on the class name and id (save change into JSON file)
+        Deletes an instance based on the class name and id\
+        (save change into JSON file)
         """
         args = self.check_args(line)
         if args:
@@ -78,18 +87,21 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
-        Prints all string representation of all instances based or not on the class name.
+        Prints all string representation of all instances\
+        based or not on the class name.
         """
         print_list = []
         args = line.split()
-        class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity', 'Place', 'Review']
+        class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity',
+                      'Place', 'Review']
         if args:
             if args[0] in class_list:
                 all_obj = storage.all()
                 for key, obj in all_obj.items():
                     if args[0] in key:
                         print_list.append(obj.__str__())
-                print(print_list)
+                if len(print_list) > 0:
+                    print(print_list)
             else:
                 print("** class doesn't exist **")
 
@@ -101,7 +113,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
-        Updates an instance based on the class name and id\nby adding or updating attribute (save the change into the JSON file)
+        Updates an instance based on the class name and id\
+        by adding or updating attribute (save the change into the JSON file)
         """
         args = self.check_args(line)
         if args:
@@ -124,6 +137,7 @@ class HBNBCommand(cmd.Cmd):
 
                 else:
                     print('** no instance found **')
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

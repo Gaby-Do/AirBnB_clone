@@ -23,10 +23,15 @@ class FileStorage():
                 aux_dic[key] = value.to_dict()
             json.dump(aux_dic, my_j_file)
 
-
     def reload(self):
         from models.base_model import BaseModel
         from models.user import User
+        from models.state import State
+        from models.city import City
+        from models.amenity import Amenity
+        from models.place import Place
+        from models.review import Review
+
         try:
             with open(self.__file_path, 'r', encoding='utf8') as my_j_file:
                 new_dic = json.load(my_j_file)

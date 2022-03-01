@@ -1,8 +1,15 @@
 #!/usr/bin/python3
 """
-defining user class
+Defining class User
+
+Public attributes:
+    email: string
+    password: string
+    first_name: string
+    last_name: string
 """
 from models.base_model import BaseModel
+
 
 class User(BaseModel):
 
