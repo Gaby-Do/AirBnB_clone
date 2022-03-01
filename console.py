@@ -103,11 +103,28 @@ class HBNBCommand(cmd.Cmd):
         """
         args = self.check_args(line)
         if args:
-            if check_id(args[1])
-            if args[2]
+            if len(args) < 2:
+                print('** instance id missing **')
+                return
+            elif len(args) < 3:
+                print('** attribute name missing **')
+                return
+            elif len(args) < 4:
+                print('** value missing **')
+                return
+            else:
+                obj_id = args[0]+'.'+args[1]
+                all_obj = storage.all()
+                if obj_id in all_obj.keys():
+                    obj = all_obj[obj_id]
+                    setattr(obj, args[2], args[3])
+                    obj.save()
 
-        check_att_name(args[2])
-        check_att_value(args[3])
+                else:
+                    print('** no instance found **')
+
+        #check_att_name(args[2])
+        #check_att_value(args[3])
 
 
 
