@@ -177,12 +177,11 @@ class HBNBCommand(cmd.Cmd):
                 line = arg_of_class + ' ' + obj_id
                 HBNBCommand.do_destroy(self, line)
             elif command == 'update':
-                args = args[1].split(',')
-                obj_id = args[0].translate({34: 0})
-                attr_name = args[1].translate({34: 0, 32: 0})
-                attr_value = args[2].translate({32: 0, 41: 0})
+                args = args[1].split(', ')
+                obj_id = args[0].strip('"')
+                attr_name = args[1].strip('"')
+                attr_value = args[2].strip(')')
                 line = arg_of_class+' '+obj_id+' '+attr_name+' '+attr_value
-                print(line)
                 HBNBCommand.do_update(self, line)
             else:
                 print(f'*** Unknown syntax:{line}')
