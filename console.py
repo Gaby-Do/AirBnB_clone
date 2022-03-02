@@ -138,6 +138,39 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print('** no instance found **')
 
+    def do_count(self, line):
+        """ display count of instances given"""
+        class_list = ['BaseModel', 'User', 'State', 'City', 'Amenity',
+                      'Place', 'Review']
+        all_obj = storage.all()
+        if line in class_list:
+            count = 0
+            for key, value in all_obj.items():
+                if line in key:
+                    count += 1
+            print(count)
+        else:
+            print("** class doesn't exist **")
+
+    def default(self, line):
+        """method callen on an input"""
+        args = line.split('.')
+        arg_of_class = args[0]
+        if len(args) == 1:
+            print(f'*** Unknown syntax:{line}')
+            return
+        try:
+            args = args[1].split('(')
+            command = args[0]
+            if command == 'all':
+                HBNBCommand.do_all(self, arg_of_class)
+            elif command == 'count':
+                HBNBCommand.do_count(self, arg_of_class)
+            else:
+                print(f'*** Unknown syntax:{line}')
+        except Exception:
+            print(f'*** Unknown syntax:{line}')
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
