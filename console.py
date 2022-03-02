@@ -132,7 +132,12 @@ class HBNBCommand(cmd.Cmd):
                 all_obj = storage.all()
                 if obj_id in all_obj.keys():
                     obj = all_obj[obj_id]
-                    setattr(obj, args[2], args[3].strip('"'))
+                    if '"' in args[3]:
+                        setattr(obj, args[2], args[3].strip('"'))
+                    elif '.' in args[3]:
+                        setattr(obj, args[2], float(args[3]))
+                    else:
+                        setattr(obj, args[2], int(args[3]))
                     obj.save()
 
                 else:
