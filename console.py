@@ -14,7 +14,7 @@ from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb)'
+    prompt = '(hbnb) '
 
     def check_args(self, line):
         args = line.split()
@@ -166,6 +166,24 @@ class HBNBCommand(cmd.Cmd):
                 HBNBCommand.do_all(self, arg_of_class)
             elif command == 'count':
                 HBNBCommand.do_count(self, arg_of_class)
+            elif command == 'show':
+                args = args[1].split(')')
+                obj_id = args[0]
+                line = arg_of_class + ' ' + obj_id
+                HBNBCommand.do_show(self, line)
+            elif command == 'destroy':
+                args = args[1].split(')')
+                obj_id = args[0]
+                line = arg_of_class + ' ' + obj_id
+                HBNBCommand.do_destroy(self, line)
+            elif command == 'update':
+                args = args[1].split(',')
+                obj_id = args[0].translate({34: 0})
+                attr_name = args[1].translate({34: 0, 32: 0})
+                attr_value = args[2].translate({32: 0, 41: 0})
+                line = arg_of_class+' '+obj_id+' '+attr_name+' '+attr_value
+                print(line)
+                HBNBCommand.do_update(self, line)
             else:
                 print(f'*** Unknown syntax:{line}')
         except Exception:
