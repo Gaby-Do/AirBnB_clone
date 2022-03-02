@@ -39,8 +39,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, line):
         """
-        Creates new instance of BaseModel,\
-        saves it (to the JSON file) and prints the id
+        Creates new instance of BaseModel, \
+saves it (to the JSON file) and prints the id
         """
         args = self.check_args(line)
         if args:
@@ -50,8 +50,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """
-        Prints the string representation of an instance\
-        based on the class name and id
+        Prints the string representation of an instance \
+based on the class name and id
         """
         args = self.check_args(line)
         if args:
@@ -69,8 +69,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """
-        Deletes an instance based on the class name and id\
-        (save change into JSON file)
+        Deletes an instance based on the class name and id \
+(save change into JSON file)
         """
         args = self.check_args(line)
         if args:
@@ -87,8 +87,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
-        Prints all string representation of all instances\
-        based or not on the class name.
+        Prints all string representation of all instances \
+based or not on the class name.
         """
         print_list = []
         args = line.split()
@@ -113,8 +113,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
-        Updates an instance based on the class name and id\
-        by adding or updating attribute (save the change into the JSON file)
+        Updates an instance based on the class name and id \
+by adding or updating attribute (save the change into the JSON file)
         """
         args = self.check_args(line)
         if args:
@@ -158,7 +158,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def default(self, line):
-        """method callen on an input"""
+        """method called on an input"""
         args = line.split('.')
         arg_of_class = args[0]
         if len(args) == 1:
