@@ -1,13 +1,13 @@
 # Stacks, Queues - LIFO, FIFO
 
-![image](https://github.com/Gaby-Do/monty/blob/master/images/portada.png)
+![image](https://github.com/BergeDios/AirBnB_clone/blob/gaby/boceto_casa.jpg)
 
 We are Software Engineer students at  [Holberton School](https://www.holbertonschool.com/) and as part of our trip we have to create an AirB&B clone. At this step we´ll be working on the console step.
 
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Gaby-Do/monty)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Gaby-Do/monty)
-![Lines of code](https://img.shields.io/tokei/lines/github/Gaby-Do/monty)
+![GitHub last commit](https://img.shields.io/github/last-commit/BergeDios/AirBnB_clone)
+![GitHub code size in byteg](https://img.shields.io/github/languages/code-size/BergeDios/AirBnB_clone)
+![Lines of code](https://img.shields.io/tokei/lines/github/BergeDios/AirBnB_clone)
 
 
 ## Project scope
