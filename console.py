@@ -12,7 +12,6 @@ from models.review import Review
 from models.state import State
 from models.user import User
 
-
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
@@ -182,12 +181,27 @@ by adding or updating attribute (save the change into the JSON file)
                 line = arg_of_class + ' ' + obj_id
                 HBNBCommand.do_destroy(self, line)
             elif command == 'update':
-                args = args[1].split(', ')
-                obj_id = args[0].strip('"')
-                attr_name = args[1].strip('"')
-                attr_value = args[2].strip(')')
-                line = arg_of_class+' '+obj_id+' '+attr_name+' '+attr_value
-                HBNBCommand.do_update(self, line)
+                if '{' in args[1]:
+                    args = args[1].split('{')
+                    obj_id = args[0].strip('", ')
+                    attrs = args[1].strip("{})'")
+                    attrs = attrs.split(", ")
+                    i = 1
+                    for i in range(len(attrs)):
+                        nv = attrs[i].split(":")
+                        atn = nv[0].strip("'")
+                        atn = atn.strip('"')
+                        atv = nv[1].strip("'")
+                        line = arg_of_class+' '+obj_id+' '+atn+' '+atv
+                        HBNBCommand.do_update(self, line)
+                        i += 1
+                else:
+                    args = args[1].split(', ')
+                    obj_id = args[0].strip('"')
+                    attr_name = args[1].strip('"')
+                    attr_value = args[2].strip(')')
+                    line = arg_of_class+' '+obj_id+' '+attr_name+' '+attr_value
+                    HBNBCommand.do_update(self, line)
             else:
                 print(f'*** Unknown syntax:{line}')
         except Exception:
