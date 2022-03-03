@@ -1,6 +1,6 @@
 # AirBnB clone - The console
 
-![image](https://github.com/BergeDios/AirBnB_clone/blob/gaby/boceto_casa.jpg)
+![image](https://github.com/BergeDios/AirBnB_clone/blob/gaby/5153a3c8fd500f43fc16854acb8c1ed0.jpg)
 
 We are Software Engineer students at  [Holberton School](https://www.holbertonschool.com/) and as part of our trip we have to create an AirB&B clone. At this step we'll be writing a command interpreter to manage our AirBnB objects.
 
