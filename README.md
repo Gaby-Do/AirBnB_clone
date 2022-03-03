@@ -1,4 +1,4 @@
-# Stacks, Queues - LIFO, FIFO
+# AirBnB clone - The console
 
 ![image](https://github.com/BergeDios/AirBnB_clone/blob/gaby/boceto_casa.jpg)
 
@@ -11,13 +11,14 @@ We are Software Engineer students at  [Holberton School](https://www.holbertonsc
 
 
 ## Project scope
-This is the first step towards building our first full web application: the AirBnB clone. As part of it we will:
+This is the first step towards building our first full web application: the AirBnB clone.
+As part of it we will:
 - Put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of our future instances.
 - Create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file.
 - Create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel.
 - Create all unittests (at least we'll try) to validate all our classes and storage engine.
 
-### With our command interpreter we will:
+#### With our command interpreter we will:
 - Create a new object (ex: a new User or a new Place)
 - Retrieve an object from a file, a database etc…
 - Do operations on objects (count, compute stats, etc…)
@@ -32,6 +33,5 @@ This is the first step towards building our first full web application: the AirB
 - Our command interpreter should work in interactive and non-interactive mode.
 
 #### Authors: 
-@ [Santiago Goyret](https://github.com/BergeDios)
-@ [Gabriela Dominguez](https://github.com/Gaby-Do)
+@ [Santiago Goyret](https://github.com/BergeDios) & [Gabriela Dominguez](https://github.com/Gaby-Do)
 
