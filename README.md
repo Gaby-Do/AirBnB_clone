@@ -1,6 +1,6 @@
 # Stacks, Queues - LIFO, FIFO
 
-![image](https://github.com/Gaby-Do/monty/blob/master/images/portada.png)
+![image](https://github.com/BergeDios/AirBnB_clone/blob/gaby/boceto_casa.jpg)
 
 We are Software Engineer students at  [Holberton School](https://www.holbertonschool.com/) and as part of our trip we have to create an AirB&B clone. At this step we´ll be working on the console step.
 
