@@ -27,26 +27,27 @@ As part of it we will:
 - Type ./console.py to launch the command interpreter.
 - create - Creates a new instance of the class.\
 	Usage:
-	- create <class name> Ex: $ create BaseModel
+	- create class_name -  Ex: $ create BaseModel
 - show - Prints an instance based on the class name and id.\
 	Usage:
-	- show <class name> <id> Ex: $ show BaseModel 1234
-	- <class name>.show(<id>) Ex: BaseModel.show("1234")
+	- show class_name id - Ex: $ show BaseModel 1234
+	- class_name.show(id) - Ex: BaseModel.show("1234")
 - destroy - Deletes an instance based on the class name and id.\
 	Usage:
-	- destroy <class name> <id> Ex: $ destroy BaseModel 1234
-	- <class name>.destroy(<id>) Ex: BaseModel.destroy("1234")
+	- destroy class_name id -  Ex: $ destroy BaseModel 1234
+	- class_name.destroy(id) - Ex: BaseModel.destroy("1234")
 - all - Prints all instances based or not on the class name.\
 	Usage:
-	- all <class name> or just all Ex: $ all BaseModel or $ all
-	- <class name>.all() Ex: BaseModel.all()
+	- all class_name - Ex: $ all BaseModel
+	- all - Ex: $ all
+	- class_name.all() - Ex: BaseModel.all()
 - update: Updates an instance based on the class name and id by adding or updating attribute.\
 	Usage:
-	- update <class name> <id> <attribute name> "<attribute value>" Ex: $ update BaseModel 1234 email "aibnb@mail.com"
-	- <class name>.update(<id>, <attribute name>, <attribute value>) Ex: BaseModel.update("1234", "año de construida", 2010)
+	- update class_name id attribute_name "attribute_value" - Ex: $ update BaseModel 1234 email "aibnb@mail.com"
+	- class_name.update(id, attribute_name, attribute_value) - Ex: BaseModel.update("1234", "año de construida", 2010)
 - count: Retrieve the number of instances of a class.\
 	Usage:
-	- <class name>.count() Ex: BaseModel.count()
+	- class_name.count() - Ex: BaseModel.count()
 
 ## General Requirements
 - Editors we can use: vi, vim, emacs
