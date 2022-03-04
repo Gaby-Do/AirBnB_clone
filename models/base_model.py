@@ -47,9 +47,11 @@ class BaseModel():
     def __str__(self):
         """
         formats the way in which the string representation will be printed
-        """
+        
         return '[{}] ({}) <{}>'.format(
             __class__.__name__, self.id, self.__dict__)
+        """
+        return f'[{__class__.__name__}] ({self.id}) <{self.__dict__}>'
 
     def save(self):
         """
