@@ -49,7 +49,7 @@ class BaseModel():
         formats the way in which the string representation will be printed
         """
         return '[{}] ({}) <{}>'.format(
-            __class__.__name__, self.id, self.__dict__)
+                __class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """
