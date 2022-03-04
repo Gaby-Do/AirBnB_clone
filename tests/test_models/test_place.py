@@ -49,7 +49,7 @@ class TestPlace(unittest.TestCase):
     def test_str(self):
         """testing str method for class Place"""
         my_place = Place()
-        place_str = f'[{Place.__name__}] ({my_place.id}) {my_place.__dict__}'
+        place_str = f'[{Place.__name__}] ({my_place.id}) <{my_place.__dict__}>'
         self.assertEqual(place_str, str(my_place))
 
     def test_save(self):

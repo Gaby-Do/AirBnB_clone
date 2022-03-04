@@ -31,7 +31,7 @@ class TestCity(unittest.TestCase):
     def test_str(self):
         """testing str method"""
         my_city = City()
-        city_str = f'[{City.__name__}] ({my_city.id}) {my_city.__dict__}'
+        city_str = f'[{City.__name__}] ({my_city.id}) <{my_city.__dict__}>'
         self.assertEqual(city_str, str(my_city))
 
     def test_save(self):
