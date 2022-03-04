@@ -17,13 +17,8 @@ class FileStorage():
         save(self)
         reload(self)
     """
-    def __init__(self):
-        """
-        Initializes class FileStorage
-
-        """
-        self.__file_path = "file.json"
-        self.__objects = {}
+    __file_path = "file.json"
+    __objects = {}
 
     def all(self):
         """
@@ -42,10 +37,13 @@ class FileStorage():
         serializes __objects to the JSON file (path: __file_path)
         """
         aux_dic = {}
-        with open(self.__file_path, 'w+', encoding='utf8') as my_j_file:
-            for key, value in self.__objects.items():
-                aux_dic[key] = value.to_dict()
-            json.dump(aux_dic, my_j_file)
+        try:
+            with open(self.__file_path, 'w+', encoding='utf8') as my_j_file:
+                for key, value in self.__objects.items():
+                    aux_dic[key] = value.to_dict()
+                json.dump(aux_dic, my_j_file)
+        except Exception:
+            return
 
     def reload(self):
         """
