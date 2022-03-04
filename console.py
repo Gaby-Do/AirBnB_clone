@@ -29,12 +29,17 @@ class HBNBCommand(cmd.Cmd):
         return args
 
     def do_quit(self, line):
+        """manages quit command"""
+        print()
         return True
 
     def do_EOF(self, line):
+        """manages eof"""
+        print()
         return True
 
     def emptyline(self):
+        """manages emptyline"""
         pass
 
     def do_create(self, line):
