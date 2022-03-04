@@ -25,17 +25,28 @@ As part of it we will:
 
 #### Commands
 - Type ./console.py to launch the command interpreter.
-- create - Creates a new instance of the class.
--- Usage: create <class name> Ex: (hbnb) create BaseModel
-- show - Prints an instance based on the class name and id.
--- Usage: show <class name> <id> Ex: (hbnb) show BaseModel 1234 or <class name>.show(<id>) Ex: BaseModel.show("1234")
-- destroy - Deletes an instance based on the class name and id.
--- Usage: destroy <class name> <id> Ex: $ destroy BaseModel 1234 or <class name>.destroy(<id>) Ex: BaseModel.destroy("1234")
-- all - Prints all instances based or not on the class name.
--- Usage: all <class name> or just all Ex: $ all BaseModel or $ all, also <class name>.all() Ex: BaseModel.all()
-- update: Updates an instance based on the class name and id by adding or updating attribute.
--- Usage: update <class name> <id> <attribute name> "<attribute value>" Ex: $ update BaseModel 1234 email "aibnb@mail.com" or <class name>.update(<id>, <attribute name>, <attribute value>) Ex: BaseModel.update("1234", "año de construida", 2010)
-- 
+- create - Creates a new instance of the class.\
+	Usage: create <class name> Ex: (hbnb) create BaseModel
+- show - Prints an instance based on the class name and id.\
+	Usage:\
+	- show <class name> <id> Ex: (hbnb) show BaseModel 1234\
+	- <class name>.show(<id>) Ex: BaseModel.show("1234")
+- destroy - Deletes an instance based on the class name and id.\
+	Usage:\
+	- destroy <class name> <id> Ex: $ destroy BaseModel 1234\
+	- <class name>.destroy(<id>) Ex: BaseModel.destroy("1234")
+- all - Prints all instances based or not on the class name.\
+	Usage:\
+	- all <class name> or just all Ex: $ all BaseModel or $ all\
+	- <class name>.all() Ex: BaseModel.all()
+- update: Updates an instance based on the class name and id by adding or updating attribute.\
+	Usage:\
+	- update <class name> <id> <attribute name> "<attribute value>" Ex: $ update BaseModel 1234 email "aibnb@mail.com"\
+	- <class name>.update(<id>, <attribute name>, <attribute value>) Ex: BaseModel.update("1234", "año de construida", 2010)
+- count: Retrieve the number of instances of a class.\
+	Usage:\
+	- <class name>.count() Ex: BaseModel.count()
+
 ## General Requirements
 - Editors: vi, vim, emacs
 - All files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
