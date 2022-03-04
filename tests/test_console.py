@@ -6,7 +6,6 @@ import unittest
 from console import HBNBCommand
 
 
-
 class TestConsole(unittest.TestCase):
 
     def test_prompt(self):
