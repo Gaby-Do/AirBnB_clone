@@ -7,9 +7,9 @@ import unittest
 from models.base_model import BaseModel
 from models.place import Place
 
+
 class TestPlace(unittest.TestCase):
     """testing Place"""
-
 
     def test_docs(self):
         """check docstring"""
