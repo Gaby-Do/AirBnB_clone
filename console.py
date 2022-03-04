@@ -197,6 +197,7 @@ by adding or updating attribute (save the change into the JSON file)
                         HBNBCommand.do_update(self, line)
                         i += 1
                 else:
+                    args = line.split('(')
                     args = args[1].split(', ')
                     obj_id = args[0].strip('"')
                     attr_name = args[1].strip('"')
