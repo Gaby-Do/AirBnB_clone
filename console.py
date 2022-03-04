@@ -78,7 +78,7 @@ based on the class name and id
         """
         args = self.check_args(line)
         if args:
-            if not args[1]:
+            if len(args) < 2:
                 print('** instance id missing **')
             else:
                 obj_id = args[0]+'.'+args[1]
