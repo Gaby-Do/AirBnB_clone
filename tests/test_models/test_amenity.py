@@ -9,41 +9,41 @@ from datetime import datetime
 
 class TestAirbnb(unittest.TestCase):
     def test_amenity_class(self):
-        """ test correct atributes of the class """
+        """ test for class and instance """
         obj_am = Amenity()
 
         self.assertEqual(obj_am.__class__, Amenity)
 
     def test_amenity_id(self):
-        """ test correct atributes of the class """
+        """ test correct attributes of the class """
         obj_am = Amenity()
 
         self.assertTrue(hasattr(obj_am, 'id'), True)
         self.assertEqual(type(obj_am.id), str)
 
     def test_amenity_created_at(self):
-        """ test correct atributes of the class """
+        """ test correct attributes of the class """
         obj_am = Amenity()
 
         self.assertTrue(hasattr(obj_am, 'created_at'), True)
         self.assertEqual(type(obj_am.created_at), datetime)
 
     def test_amenity_updated_at(self):
-        """ test correct atributes of the class """
+        """ test correct attributes of the class """
         obj_am = Amenity()
 
         self.assertTrue(hasattr(obj_am, 'updated_at'), True)
         self.assertEqual(type(obj_am.updated_at), datetime)
 
     def test_amenity_name(self):
-        """ test correct atributes of the class """
+        """ test correct attributes of the class """
         obj_am = Amenity()
 
         self.assertTrue(hasattr(obj_am, 'name'), True)
         self.assertEqual(type(obj_am.name), str)
 
     def test_amenity_dict(self):
-        """ test correct atributes of the class """
+        """ test correct attributes of the class """
         obj_am = Amenity()
 
         self.assertTrue(type(obj_am.to_dict()), dict)
