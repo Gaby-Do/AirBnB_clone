@@ -30,7 +30,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """manages quit command"""
-        print()
         return True
 
     def do_EOF(self, line):
