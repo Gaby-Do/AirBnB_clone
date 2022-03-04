@@ -52,14 +52,14 @@ class BaseModel():
 
     def save(self):
         """
-        updates the public instance attribute updated_at with the current datetime
+        updates the public instance attribute updated_at with current datetime
         """
         self.updated_at = datetime.now()
         storage.save()
 
     def to_dict(self):
         """
-        returns a dictionary containing all keys/values of __dict__ of the instance
+        returns a dict containing all keys/values of __dict__ of the instance
         """
         dictio = self.__dict__.copy()
         dictio["__class__"] = self.__class__.__name__

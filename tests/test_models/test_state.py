@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """
-    Tests for class State 
+    Tests for class State
 """
 
 import unittest
 from models.base_model import BaseModel
 from models.state import State
 
+
 class TestState(unittest.TestCase):
     """testing State"""
-
 
     def test_docs(self):
         """check docstring"""
