@@ -6,8 +6,6 @@ We are Software Engineer students at  [Holberton School](https://www.holbertonsc
 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/BergeDios/AirBnB_clone)
-![GitHub code size in byteg](https://img.shields.io/github/languages/code-size/BergeDios/AirBnB_clone)
-![Lines of code](https://img.shields.io/tokei/lines/github/BergeDios/AirBnB_clone)
 
 
 ## Project scope
