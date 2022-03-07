@@ -57,11 +57,16 @@ class FileStorage():
         from models.state import State
         from models.user import User
 
+        class_dict = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+                      "Place": Place, "Review": Review,
+                      "State": State, "User": User}
         try:
             with open(self.__file_path, 'r', encoding='utf8') as my_j_file:
                 new_dic = json.load(my_j_file)
                 for key, value in new_dic.items():
                     key_args = str(key).split('.')
-                    self.__objects[key] = eval(key_args[0])(**value)
+                    print(f'keyargs:{key_args}')
+                    if key_args[0] in class_dict.keys():
+                        self.__objects[key] = class_dict[key_args[0]](**value)
         except Exception:
             return
