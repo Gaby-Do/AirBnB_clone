@@ -195,9 +195,12 @@ by adding or updating attribute (save the change into the JSON file)
                     i = 1
                     for i in range(len(attrs)):
                         nv = attrs[i].split(":")
-                        atn = nv[0].strip("'")
+                        print(nv)
+                        atn = nv[0].strip(" '")
+                        print(atn)
                         atn = atn.strip('"')
-                        atv = nv[1].strip("'")
+                        print(atn)
+                        atv = nv[1].strip("' ")
                         line = arg_of_class+' '+obj_id+' '+atn+' '+atv
                         HBNBCommand.do_update(self, line)
                         i += 1
