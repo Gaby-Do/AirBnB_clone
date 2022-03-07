@@ -85,6 +85,7 @@ based on the class name and id
                 all_obj = storage.all()
                 if obj_id in all_obj.keys():
                     all_obj.pop(obj_id)
+                    storage.save()
                 else:
                     print('** no instance found **')
                     return
