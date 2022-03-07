@@ -58,3 +58,15 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotEqual(my_model_json['name'], sec_json['name'])
         self.assertNotEqual(my_model.created_at, my_model.updated_at)
         self.assertEqual(my_model_json['created_at'], sec_json['created_at'])
+
+    def test_save(self):
+        """testing save"""
+        obj_1 = BaseModel()
+        created1 = obj_1.created_at
+        updated1 = obj_1.updated_at
+        obj_1.save()
+        created2 = obj_1.created_at
+        updated2 = obj_1.updated_at
+
+        self.assertEqual(created1, created2)
+        self.assertNotEqual(updated1, updated2)
