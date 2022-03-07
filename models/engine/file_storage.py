@@ -65,7 +65,6 @@ class FileStorage():
                 new_dic = json.load(my_j_file)
                 for key, value in new_dic.items():
                     key_args = str(key).split('.')
-                    print(f'keyargs:{key_args}')
                     if key_args[0] in class_dict.keys():
                         self.__objects[key] = class_dict[key_args[0]](**value)
         except Exception:
