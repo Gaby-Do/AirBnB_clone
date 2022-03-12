@@ -21,26 +21,41 @@
 	transform: translate(0, -50%)
 }
 .button:hover {
-	opacity: 0.2;
+	opacity: 0.9;
 }
 .locations {
-	margin: auto;
+	position: absolute;
 	height: 100%;
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
 }
 .amenities {
-	position: relative;
+	position: absolute;
 	height: 100%;
 	width: 25%;
-	border-right: 1px solid #DDDDDD;
+	left: 25%;
 }
-.locations.h3 {
-	font-weight: 600;
+.locations h3 {
 	position: absolute;
-	color: red;
+	left: 10%;
+	font-weight: 600;
+	color: black;
 }
-.locations.h4 {
-	color: red;
+.locations h4 {
+	position: absolute;
+	left: 10%;
+	color: black;
+	font-size: 14px;
+}
+.amenities h3 {
+	position: absolute;
+	left: 10%;
+	font-weight: 600;
+	color: black;
+}
+.amenities h4 {
+	position: absolute;
+	left: 10%;
+	color: black;
 	font-size: 14px;
 }
