@@ -8,12 +8,15 @@
 	margin: 20px;
 	border: 1px solid #FF5A5F;
 	border-radius: 4px;
-	display: inline-block;
+	position: relative;
 }
-.places div {
+.places {
 	display: flex;
 	justify-content: center;
 	flex-flow: wrap;
+}
+.places h1 {
+	flex: 0 0 100%;
 }
 .places h2 {
 	size: 30px;
